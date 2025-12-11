@@ -5,14 +5,15 @@
 
 ## 📈 **Próxima Fase: Aplicação & Excelência**
 
-### ⚡ **Performance & Otimização**
-- Execution Plans e índices estratégicos
-- Rewriting queries (JOINs vs subqueries, EXISTS vs IN)
+### ⚡ **Performance & Otimização** (Tornar-se eficiente)
+- Diagnosticar queries lentas com **Execution Plans**
+- Implementar **índices estratégicos** para casos reais
+- **Refatorar queries** complexas para melhor performance
 
-### 📊 **Integração & Modelagem**
-- Modelagem Star Schema para analytics
-- SQL + Python (pipelines) e SQL + Power BI (dashboards)
-- Versionamento de scripts com Git
+### 📊 **Integração & Modelagem** (Trabalhar em equipe)
+- Projetar **modelos analíticos** (Star Schema) para dashboards
+- Criar **pipelines simples** com Python (extrair → transformar → carregar)
+- Versionar scripts no **Git** como em projetos reais
 
 ## 🏆 **Metas Mensuráveis**
 
