@@ -16,7 +16,7 @@
 - Criar **pipelines simples** com Python (extrair → transformar → carregar)
 - Versionar scripts no **Git** como em projetos reais
 
-## 🏆 **Metas Mensuráveis**
+## 🏆 **Metas**
 
 **✅ Meta Diária:**
 - **10 exercícios LeetCode** (foco em SQL Medium + revisão de Hard)
@@ -30,6 +30,21 @@
 - **Certificação Microsoft PL-300** (Power BI Data Analyst)
 - **Projeto integrado**: Dashboard Power BI com dados de API + SQL Server
 
+# LeetCode SQL Solutions
+
+## 📊 Visão Geral
+Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e revisão técnica.
+
+## 🔗 Acesse as Soluções
+👉 **[Lista Completa de Exercícios Resolvidos](./SOLUTIONS.md)**
+
+## 📈 Progresso
+| Dificuldade | Completos | Em Progresso |
+|-------------|-----------|--------------|
+| 🟢 Fácil | 12 | 0 |
+| 🟡 Médio | 0 | 0 |
+| 🔴 Difícil | 0 | 0 |
+
 ## 📚 Exercícios Resolvidos
 [**👉 Ver todos os exercícios resolvidos (Módulos 5-27)**](./exercicios-pdf/README.md)
 
@@ -37,7 +52,7 @@
 - 💻 **Código SQL completo** 
 - 📊 **Do básico ao avançado**
 
-## 📚 SQL Server - Progresso Diário
+## 📚 SQL Server - Progresso Estudado
 
 - [x] **1. Configuração do Ambiente** ✅ 27/11/2025
 - [x] **2. Conceitos Fundamentais** ✅ 27/11/2025
@@ -67,6 +82,8 @@
 - [x] **26. Triggers DDL** ✅ 09/12/2025
 - [x] **27. Pivot Table** ✅ 09/12/2025
 ---
+
+
 
 ## 🏆 **Certificações & Perfis Técnicos**
 
