@@ -32,11 +32,11 @@
 ### 📈 Basic Aggregate Functions (5 problemas)
 | # | Problema | Tópicos | Data | Link |
 |---|----------|---------|------|------|
-| 620 | Not Boring Movies | `WHERE`, `MOD`, `ORDER BY` | 11/12/2025 | [Ver solução](#) |
-| 1251 | Average Selling Price | `LEFT JOIN`, `BETWEEN`, `COALESCE`, `NULLIF`, `ROUND` | 11/12/2025 | [Ver solução](#) |
-| 1075 | Project Employees I | `JOIN`, `AVG`, `ROUND` | 11/12/2025 | [Ver solução](#) |
-| 1633 | Percentage of Users Attended a Contest | `GROUP BY`, Subquery, `ROUND` | 11/12/2025 | [Ver solução](#) |
-| 1211 | Queries Quality and Percentage | `AVG`, `CASE`, `ROUND`, `NULLIF`, `GROUP BY` | 11/12/2025 | [Ver solução](#) |
+| 620 | Not Boring Movies | `WHERE`, `MOD`, `ORDER BY` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/620.%20Not%20Boring%20Movies.md) |
+| 1251 | Average Selling Price | `LEFT JOIN`, `BETWEEN`, `COALESCE`, `NULLIF`, `ROUND` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1251.%20Average%20Selling%20Price.md) |
+| 1075 | Project Employees I | `JOIN`, `AVG`, `ROUND` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1075.%20Project%20Employees.md) |
+| 1633 | Percentage of Users Attended a Contest | `GROUP BY`, Subquery, `ROUND` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1633.%20Percentage%20of%20Users%20Attended%20a%20Contest.md) |
+| 1211 | Queries Quality and Percentage | `AVG`, `CASE`, `ROUND`, `NULLIF`, `GROUP BY` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1211.%20Queries%20Quality%20and%20Percentage.md) |
 
 ---
 
