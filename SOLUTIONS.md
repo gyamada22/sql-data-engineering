@@ -1,9 +1,8 @@
 # 📋 Lista Completa de Soluções SQL
 
 ## 📊 Estatísticas Gerais
-- **Total resolvidos:** 12 problemas
+- **Total resolvidos:** 17 problemas
 - **Última atualização:** 12 de Dezembro de 2025
-- **Foco atual:** Problemas Medium de JOINs complexos
 
 ---
 
