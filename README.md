@@ -2,6 +2,7 @@
 
 ## 📊 Progresso em Tempo Real 🚀
 - ✅ Conteúdo Básico & Intermediário: 100% estudado
+- 🔄 **LeetCode SQL:** Prática diária 5~10 exercícios documentados em repositório
 - 🚀 Avançado: Em progresso
 
 ## 🏆 **Metas**
