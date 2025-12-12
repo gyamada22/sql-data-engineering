@@ -40,11 +40,7 @@
 ---
 
 ## 🟡 Nível Médio (0 problemas)
-*Começando em breve! Foco em:*
-1. JOINs com múltiplas tabelas
-2. Subqueries correlacionadas
-3. CTEs (Common Table Expressions)
-4. Funções de janela avançadas
+*Começando em breve! após terminar o nível Easy
 
 ---
 
