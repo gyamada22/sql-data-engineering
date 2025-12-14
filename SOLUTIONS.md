@@ -1,12 +1,12 @@
 # 📋 Lista Completa de Soluções SQL
 
 ## 📊 Estatísticas Gerais
-- **Total resolvidos:** 17 problemas
-- **Última atualização:** 12 de Dezembro de 2025
+- **Total resolvidos:** 22 problemas
+- **Última atualização:** 14 de Dezembro de 2025
 
 ---
 
-## ✅ Nível Easy (17 problemas)
+## ✅ Nível Easy (22 problemas)
 
 ### 🔍 Select (5 problemas)
 | # | Problema | Tópicos | Data | Link |
@@ -37,14 +37,21 @@
 | 1633 | Percentage of Users Attended a Contest | `GROUP BY`, Subquery, `ROUND` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1633.%20Percentage%20of%20Users%20Attended%20a%20Contest.md) |
 | 1211 | Queries Quality and Percentage | `AVG`, `CASE`, `ROUND`, `NULLIF`, `GROUP BY` | 11/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1211.%20Queries%20Quality%20and%20Percentage.md) |
 
+### 🔃 Sorting and Grouping (5 problemas)
+| # | Problema | Tópicos | Data | Link |
+|---|----------|---------|------|------|
+| 2356 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)`, `GROUP BY` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/2356.%20Number%20of%20Unique%20Subjects%20Taught%20by%20Each%20Teacher.md) |
+| 1141 | User Activity for the Past 30 Days I | `COUNT`, `DISTINCT`, `GROUP BY`, `WHERE` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1141.%20User%20Activity%20for%20the%20Past%2030%20Days%20I.md) |
+| 596 | Classes More Than 5 Students | `GROUP BY`, `HAVING` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/596.%20Classes%20More%20Than%205%20Students.md) |
+| 1729 | Find Followers Count | `COUNT`, `GROUP BY`, `ORDER BY` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1729.%20Find%20Followers%20Count.md) |
+| 619 | Biggest Single Number | `GROUP BY`, `HAVING`, `MAX` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/619.%20Biggest%20Single%20Number.md) |
+
 ---
 
 ## 🟡 Nível Médio (0 problemas)
-*Começando em breve! após terminar o nível Easy
+*Começando em breve! após terminar o nível Easy*
 
 ---
 
 ## 🔴 Nível Difícil (0 problemas)
 *Desafios futuros após dominar o nível Medium*
-
----
