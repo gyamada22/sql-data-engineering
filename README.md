@@ -30,7 +30,7 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 ## 📈 Progresso
 | Dificuldade | Completos | Em Progresso |
 |-------------|-----------|--------------|
-| 🟢 Fácil | 17 | 0 |
+| 🟢 Fácil | 22 | 0 |
 | 🟡 Médio | 0 | 0 |
 | 🔴 Difícil | 0 | 0 |
 
@@ -41,7 +41,7 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 - Implementar **índices estratégicos** para casos reais
 - **Refatorar queries** complexas para melhor performance
 
-### 📊 **Integração & Modelagem** (Trabalhar em equipe)
+### 📊 **Integração & Modelagem** 
 - Projetar **modelos analíticos** (Star Schema) para dashboards
 - Criar **pipelines simples** com Python (extrair → transformar → carregar)
 - Versionar scripts no **Git** como em projetos reais
