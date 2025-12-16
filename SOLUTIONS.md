@@ -46,6 +46,18 @@
 | 1729 | Find Followers Count | `COUNT`, `GROUP BY`, `ORDER BY` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1729.%20Find%20Followers%20Count.md) |
 | 619 | Biggest Single Number | `GROUP BY`, `HAVING`, `MAX` | 14/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/619.%20Biggest%20Single%20Number.md) |
 
+### 🧠 Advanced Select and Joins (2 problemas)
+| # | Problema | Tópicos | Data | Link |
+|---|----------|---------|------|------|
+| 1731 | The Number of Employees Which Report to Each Employee | `SELF JOIN`, `COUNT`, `GROUP BY` | 16/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1731.%20The%20Number%20of%20Employees%20Which%20Report%20to%20Each%20Employee.md) |
+| 1789 | Primary Department for Each Employee | `CASE`, `GROUP BY` | 16/12/2025 | [Ver solução](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1789.%20Primary%20Department%20for%20Each%20Employee.md) |
+
+### 🔁 Subqueries (0 problemas)
+*Em breve*
+
+### 🔤 Advanced String Functions / Regex / Clause (0 problemas)
+*Em breve*
+
 ---
 
 ## 🟡 Nível Médio (0 problemas)
