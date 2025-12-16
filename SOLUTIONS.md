@@ -74,8 +74,3 @@
 ## 🔴 Nível Difícil (0 problemas)
 *Desafios futuros após dominar o nível Medium*
 
----
-
-## 🟡 Nível Médio (0 problemas)
-*Começando em breve! após terminar o nível Easy*
-
