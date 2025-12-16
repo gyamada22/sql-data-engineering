@@ -30,7 +30,7 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 ## 📈 Progresso
 | Dificuldade | Completos | Em Progresso |
 |-------------|-----------|--------------|
-| 🟢 Fácil | 22 | 0 |
+| 🟢 Fácil | 27 | 0 |
 | 🟡 Médio | 0 | 0 |
 | 🔴 Difícil | 0 | 0 |
 
