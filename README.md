@@ -28,11 +28,11 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 👉 **[Lista Completa de Exercícios Resolvidos](./SOLUTIONS.md)**
 
 ## 📈 Progresso
-| Dificuldade | Completos | Em Progresso |
-|-------------|-----------|--------------|
-| 🟢 Fácil | 27 | 0 |
-| 🟡 Médio | 0 | 0 |
-| 🔴 Difícil | 0 | 0 |
+| Dificuldade | Completos |
+|-------------|-----------|
+| 🟢 Fácil | 27 |
+| 🟡 Médio | 0 |
+| 🔴 Difícil | 0 |
 
 ## 📈 **Próxima Fase: Aplicação & Excelência**
 
