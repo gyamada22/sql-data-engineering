@@ -31,7 +31,7 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 | Dificuldade | Completos |
 |-------------|-----------|
 | 🟢 Fácil | 32 |
-| 🟡 Médio | 2 |
+| 🟡 Médio | 5 |
 | 🔴 Difícil | 0 |
 
 ## 📈 **Próxima Fase: Aplicação & Excelência**
