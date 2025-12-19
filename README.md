@@ -2,13 +2,13 @@
 
 ## 📊 Progresso em Tempo Real 🚀
 - ✅ Conteúdo Básico & Intermediário: 100% estudado
-- 🔄 **LeetCode SQL:** Prática diária 5~10 exercícios documentados em repositório
+- 🔄 **LeetCode SQL:** Prática diária 3~5 exercícios documentados em repositório
 - 🚀 Avançado: Em progresso
 
 ## 🏆 **Metas**
 
 **✅ Meta Diária:**
-- **10 exercícios LeetCode** (foco em SQL Medium + revisão de Hard)
+- **5 exercícios LeetCode** (foco em SQL Medium + revisão de Hard)
 - **Revisar conteúdo semanalmente** 
 
 **✅ Meta de 30 dias:**
@@ -31,7 +31,7 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 | Dificuldade | Completos |
 |-------------|-----------|
 | 🟢 Fácil | 32 |
-| 🟡 Médio | 0 |
+| 🟡 Médio | 2 |
 | 🔴 Difícil | 0 |
 
 ## 📈 **Próxima Fase: Aplicação & Excelência**
