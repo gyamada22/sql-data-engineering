@@ -33,12 +33,6 @@
 | 🟡 Medium | 6 |
 | 🔴 Hard | 0 |
 
-## 🟩 LeetCode Activity Heatmap
-
-![LeetCode Heatmap](./heatmap.svg)
-
-*Mostrando atividade desde Dezembro de 2025*
-
 📌 Todas as soluções incluem:
 - Query final
 - Lógica explicada
