@@ -1,59 +1,60 @@
-# 🗄️ SQL Data Engineering Journey
+# 🗄️ SQL Data Journey
 
-## 📊 Progresso em Tempo Real 🚀
-- ✅ Conteúdo Básico & Intermediário: 100% estudado
-- 🔄 **LeetCode SQL:** Prática diária 3~5 exercícios documentados em repositório
-- 🚀 Avançado: Em progresso
+> Jornada prática em **SQL Server**, com foco em **análise de dados**, baseada em estudo estruturado + prática diária documentada.
 
-## 🏆 **Metas**
+---
 
-**✅ Meta Diária:**
-- **5 exercícios LeetCode** (foco em SQL Medium + revisão de Hard)
-- **Revisar conteúdo semanalmente** 
+## 👤 Visão Geral
 
-**✅ Meta de 30 dias:**
-- **200+ exercícios LeetCode** (todos os problemas SQL disponíveis)
-- **1 projeto completo**: ETL básico com Python + SQL + visualização
+- ✅ **SQL Server — Intermediário consolidado**
+- 🔁 **Prática diária no LeetCode (SQL Medium)**
+- 📚 Conteúdo teórico concluído, foco atual em **fixação, performance e aplicação**
+- 🧠 Estudo orientado a **resolução de problemas reais**
 
-**✅ Meta de 60 dias:**
-- **Certificação Microsoft PL-300** (Power BI Data Analyst)
-- **Projeto integrado**: Dashboard Power BI com dados de API + SQL Server
+---
 
-# LeetCode SQL Solutions
+## 📊 Status Técnico Atual
 
-## 📊 Visão Geral
-Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e revisão técnica.
+- **Fundamentos & Intermediário:** ✅ 100% concluído  
+- **Avançado:** 🔄 em evolução (performance, otimização, modelagem)
+- **LeetCode SQL:** prática diária (3–5 exercícios/dia), soluções documentadas
+- **Total de exercícios práticos:** 110+
 
-## 🔗 Acesse as Soluções
-👉 **[Lista Completa de Exercícios Resolvidos](./SOLUTIONS.md)**
+---
 
-## 📈 Progresso
-| Dificuldade | Completos |
-|-------------|-----------|
-| 🟢 Fácil | 32 |
-| 🟡 Médio | 5 |
-| 🔴 Difícil | 0 |
+## 💻 LeetCode SQL — Prática Contínua
 
-## 📈 **Próxima Fase: Aplicação & Excelência**
+👉 **[Ver lista completa de soluções](./SOLUTIONS.md)**
 
-### ⚡ **Performance & Otimização** (Tornar-se eficiente)
-- Diagnosticar queries lentas com **Execution Plans**
-- Implementar **índices estratégicos** para casos reais
-- **Refatorar queries** complexas para melhor performance
+### 📈 Progresso Atual
+| Dificuldade | Resolvidos |
+|------------|------------|
+| 🟢 Easy | 32 |
+| 🟡 Medium | 5 |
+| 🔴 Hard | 0 |
 
-### 📊 **Integração & Modelagem** 
-- Projetar **modelos analíticos** (Star Schema) para dashboards
-- Criar **pipelines simples** com Python (extrair → transformar → carregar)
-- Versionar scripts no **Git** como em projetos reais
+📌 Todas as soluções incluem:
+- Query final
+- Lógica explicada
+- Uso de boas práticas (CTE, Window Functions, clareza)
 
-## 📚 Exercícios Resolvidos
-[**👉 Ver todos os exercícios resolvidos (Módulos 5-27)**](./exercicios-pdf/README.md)
+---
 
-- ✅ **110+ exercícios práticos e documentados**
-- 💻 **Código SQL completo** 
-- 📊 **Do básico ao avançado**
+## 📚 Exercícios Estruturados (Curso)
 
-## 📚 SQL Server - Progresso Estudado
+👉 **[Ver todos os exercícios resolvidos](./exercicios-pdf/README.md)**
+
+- ✅ **110+ exercícios práticos**
+- 💻 SQL Server
+- 📊 Do básico ao avançado
+- 🧠 Foco em lógica, não só sintaxe
+
+---
+
+## 📚 SQL Server — Módulos Estudados
+
+<details>
+<summary><strong>📌 Clique para ver todo o conteúdo estudado</strong></summary>
 
 - [x] **1. Configuração do Ambiente** ✅ 27/11/2025
 - [x] **2. Conceitos Fundamentais** ✅ 27/11/2025
@@ -82,45 +83,50 @@ Repositório pessoal com soluções de problemas SQL do LeetCode para estudo e r
 - [x] **25. Triggers DML** ✅ 09/12/2025
 - [x] **26. Triggers DDL** ✅ 09/12/2025
 - [x] **27. Pivot Table** ✅ 09/12/2025
+
+</details>
+📅 Período: 27/11/2025 → 09/12/2025  
+
 ---
 
+## 🚀 Próxima Fase: Aplicação Profissional
 
+### ⚡ Performance & Otimização
+- Análise de **Execution Plans**
+- Uso estratégico de **índices**
+- Refatoração de queries complexas
 
-## 🏆 **Certificações & Perfis Técnicos**
+### 📊 Integração & Projetos
+- Modelagem analítica (Star Schema)
+- ETL simples com Python + SQL
+- Integração com Power BI
 
-### 🧠 **LeetCode Daily Practice**
-<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 20px 0;">
-  <a href="https://leetcode.com/u/AEASEzj6jW/">
-    <img src="https://img.shields.io/badge/👤_Perfil_LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white">
-  </a>
-</div>
+---
 
-### 📊 **HackerRank SQL Proficiency**
-**5⭐ Gold Level | 710 Points | 81% Completion Rate**
-<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 20px 0;">
-  <a href="https://www.hackerrank.com/guilhermeyamada1">
-    <img src="https://img.shields.io/badge/👤_Perfil_Completo-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white">
-  </a>
-</div>
+## 🏆 Certificações & Perfis Técnicos
 
-### 📜 **Certificados HackerRank**
-<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 20px 0;">
-  <a href="https://www.hackerrank.com/certificates/942e53240162">
-    <img src="https://img.shields.io/badge/SQL-Intermediário-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white">
-  </a>
-  <a href="https://www.hackerrank.com/certificates/5eb4b01629bb">
-    <img src="https://img.shields.io/badge/SQL-Básico-00B4D8?style=for-the-badge&logo=hackerrank&logoColor=white">
-  </a>
-</div>
+### 🧠 LeetCode
+🔗 https://leetcode.com/u/gyamada22/
 
-### 🎖️ **Badges Oficiais - Microsoft Learn**
-<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 25px 0;">
-  <a href="https://learn.microsoft.com/pt-br/users/guilhermeyamada-9069/achievements/nmebjgqf">
-    <img src="https://img.shields.io/badge/📝_Modificar_dados_com_T--SQL-0078D4?style=for-the-badge&logo=microsoft&logoColor=white">
-  </a>
-  <a href="https://learn.microsoft.com/pt-br/users/guilhermeyamada-9069/achievements/82m4b5mw">
-    <img src="https://img.shields.io/badge/📊_Consultar_e_Modificar_Dados-005BA9?style=for-the-badge&logo=microsoft&logoColor=white">
-  </a>
-</div>
+- Exercícios SQL Medium em progresso
+- Streak ativo
+- Soluções públicas e documentadas
+
+### 📊 HackerRank
+🔗 https://www.hackerrank.com/guilhermeyamada1  
+**SQL Gold Badge (5⭐)**
+
+- [SQL (Intermediate)](https://www.hackerrank.com/certificates/942e53240162)
+- [SQL (Basic)](https://www.hackerrank.com/certificates/5eb4b01629bb)
+
+### 🎖️ Microsoft Learn
+- [Modificar dados com T-SQL](https://learn.microsoft.com/pt-br/users/guilhermeyamada-9069/achievements/nmebjgqf)
+- [Consultar dados com Transact-SQL](https://learn.microsoft.com/pt-br/users/guilhermeyamada-9069/achievements/82m4b5mw)
+
+---
+
+> **Consistência > intensidade.**  
+> Estudo diário, documentado e orientado a longo prazo.
+
 
 
