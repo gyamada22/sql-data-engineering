@@ -16,7 +16,7 @@ jobs:
         
       - name: Generate LeetCode Stats SVG
         run: |
-          curl -o leetcode.svg "https://leetcard.jacoblin.cool/gyamada22?theme=dark&font=source_code_pro"
+          curl -o leetcode.svg "https://leetcard.jacoblin.cool/gyamada22?theme=dark&font=source_code_pro&animation=true"
         
       - name: Commit and Push
         run: |
