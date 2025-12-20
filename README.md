@@ -7,7 +7,7 @@
 ## 👤 Visão Geral
 
 - ✅ **SQL Server — Intermediário consolidado**
-- 🔁 **Prática diária no LeetCode (SQL Medium)**
+- 🔁 **LeetCode SQL:** 🔥 40+ problemas resolvidos e documentados (prática diária para consolidar)
 - 📚 Conteúdo teórico concluído, foco atual em **fixação, performance e aplicação**
 - 🧠 Estudo orientado a **resolução de problemas reais**
 
