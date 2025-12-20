@@ -1,0 +1,80 @@
+---Resoluçao 12
+--ex1
+declare @ecodesconto float = 0.95, @regdesconto float = 0.93 , @deldesconto float = 0.91
+
+select	Productkey 'Id',
+		Productname 'Nome do Produto',
+		case 
+			when Classname = 'Economy' then Unitprice * @ecodesconto
+			when Classname = 'Regular' then Unitprice * @regdesconto
+			when Classname = 'Deluxe' then Unitprice * @deldesconto 
+			else Unitprice 
+		end 'Preco com desconto',
+		case 
+			when Classname = 'Economy' then '5%'
+			when Classname = 'Regular' then '7%'
+			when Classname = 'Deluxe' then '9%'		
+			else 'Sem desconto' 
+		end 'Desconto aplicado'
+from DimProduct
+
+--ex2
+select	Brandname 'Marca',
+		count(Productname) 'Qtd de produtos', 
+		case
+			when count(Productname) > 500 then 'Categoria A'
+			when count(Productname) >= 100 then 'Categoria B' 
+			else 'Categoria C'
+		end 'Categoria'
+from DimProduct
+group by Brandname
+
+--ex3
+select	Storename 'Nome da empresa', 
+		Employeecount 'Qta de funcionarios',
+		case
+			when Employeecount >= 50 then 'Acima de 50 funcionarios'
+			when Employeecount >= 40 then 'Entre 40 e 50 funcionarios'
+			when Employeecount >= 30 then 'Entre 30 e 40 funcionarios'
+			when Employeecount >= 20 then 'Entre 20 e 30 funcionarios'
+			when Employeecount >= 10 then 'Entre 10 e 20 funcionarios'
+			else 'Abaixo de 50 funcionarios'
+		end 'Categoria'
+from DimStore
+
+--ex4
+select	dps.Productsubcategoryname 'Nome da subcategoria',
+		avg(dp.Weight)*100 'Peso total',
+		case
+			when avg(dp.Weight)*100 >= 1000 then 'Rota 2'
+			else 'Rota 1'
+		end 'Rota do produto'
+from DimProduct dp
+join DimProductSubcategory dps
+	on dps.ProductSubcategoryKey = dp.ProductSubcategoryKey
+where dp.Weight is not null
+group by dps.Productsubcategoryname
+
+--ex5
+select	Firstname 'Nome',
+		Gender 'Sexo',
+		TotalChildren 'Qtd filhos',
+		Emailaddress 'email',
+		case	
+			when TotalChildren > 0 and Gender = 'F' then 'Sorteio mae do ano'
+			when TotalChildren > 0 and Gender = 'M' then 'Sorteio pai do ano'
+			else 'Caminhao de premios'
+		end 'Acao de marketing'
+from DimCustomer
+where Firstname is not null
+
+--ex6
+select * from DimStore
+
+select	Storename 'Nome da loja',
+		case	
+			when Closedate is null then Datediff(day,Opendate,getdate())
+			else Datediff(day,Opendate,Closedate)
+		end 'Dias em atividade'
+from DimStore
+order by 'Dias em atividade' desc

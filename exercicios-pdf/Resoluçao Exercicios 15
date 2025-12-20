@@ -1,0 +1,104 @@
+--- Modulo 15
+--ex1
+select * from Factsales
+where Storekey = (
+	select Storekey from Dimstore 
+	where Storename = 'Contoso Orlando Store')
+
+--ex2
+select	Productkey, 
+		Productname, 
+		Unitprice, 
+		(select Unitprice from DimProduct where ProductKey = 1893) 'Preço do produto 1893' 
+from Dimproduct
+where Unitprice > (
+		select Unitprice 
+		from DimProduct 
+		where ProductKey = 1893)
+
+--ex3
+select	concat(FirstName,' ', Lastname) 'Funcionarios premiados' 
+from DimEmployee
+where DepartmentName = (
+		select DepartmentName 
+		from DimEmployee 
+		where concat(FirstName,' ', Lastname) = 'Miguel Severino')
+
+--ex4
+select	CustomerKey, 
+		FirstName, 
+		LastName, 
+		EmailAddress, 
+		YearlyIncome 
+from DimCustomer
+where YearlyIncome > (	select avg(YearlyIncome) 
+						from DimCustomer 
+						where Firstname is not null) and Firstname is not null
+
+--ex5
+select	Customerkey,
+		concat(Firstname,' ',Lastname) 'Nome completo', 
+		EmailAddress 'Email' 
+from DimCustomer 
+where CustomerKey = any (
+		select CustomerKey 
+		from FactOnlineSales 
+		where PromotionKey = any (
+			select PromotionKey 
+			from DimPromotion 
+			where PromotionName = 'Asian Holiday Promotion'))
+
+--ex6
+select	CustomerKey,
+		CompanyName 
+from DimCustomer 
+where CustomerKey = any(
+		select CustomerKey 
+		from FactOnlineSales 
+		group by CustomerKey,ProductKey 
+		having sum(SalesQuantity)>3000)
+
+--ex7
+select	ProductKey,
+		ProductName,
+		BrandName,
+		UnitPrice,
+		(select avg(UnitPrice) from DimProduct) 'Media do preço' 
+from DimProduct
+
+--ex8
+select	MAX(Quantidade)'Maximo', 
+		MIN(Quantidade)'Minimo', 
+		AVG(Quantidade)'Media'
+from(select BrandName,
+			count(ProductName) 'Quantidade'
+	from DimProduct 
+	group by BrandName) AS T
+
+--ex9
+with CTE_QtdProdutosPorMarca as(
+		select  Brandname,
+				count(ProductName) 'Quantidade'
+		from DimProduct
+		group by BrandName)
+
+select Max(Quantidade) from CTE_QtdProdutosPorMarca
+--where BrandName = 'Fabrikam'
+
+--ex10
+with CTE_ProdutosAdventureWorks as (
+		select	ProductKey,
+				ProductName,
+				ProductSubcategoryKey,
+				BrandName,
+				UnitPrice
+		from DimProduct
+		where BrandName = 'Adventure Works'),
+CTE_CategoriaTelevisionsERadio as (
+		select  ProductSubcategoryKey,
+				ProductSubcategoryName
+		from DimProductSubcategory
+		where ProductSubcategoryName in ('Televisions','Monitors'))
+
+select * from CTE_ProdutosAdventureWorks paw join CTE_CategoriaTelevisionsERadio ctr 
+on paw.ProductSubcategoryKey = ctr.ProductSubcategoryKey

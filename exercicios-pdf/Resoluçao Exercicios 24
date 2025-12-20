@@ -1,0 +1,68 @@
+---MODULO 24
+--EX1
+create or alter procedure dbo.resumo_marca(@marca varchar(30))
+as begin
+
+select	dpc.ProductCategoryName,
+		count(*) 'Total produtos da marca'
+from DimProduct dp join DimProductSubcategory dps
+	on dp.ProductSubcategoryKey = dps.ProductSubcategoryKey
+	join DimProductCategory dpc
+		on dpc.ProductCategoryKey = dps.ProductCategoryKey
+where dp.BrandName = @marca
+group by dpc.ProductCategoryName	
+end 
+go
+
+execute dbo.resumo_marca 'Contoso'
+
+--ex2
+create or alter procedure dbo.lista_clientes(@N int)
+as begin
+
+select top(@N) FirstName 
+		from DimCustomer 
+		where FirstName is not null
+		order by DateFirstPurchase asc
+end 
+
+execute dbo.lista_clientes 15
+
+--ex3
+create or alter procedure dbo.lista_funcionarios(@mes int,@ano int)
+as begin
+
+select FirstName 
+		from DimEmployee
+		where YEAR(HireDate) = @ano and Month(HireDate) = @mes
+end 
+
+execute dbo.lista_funcionarios @ano = 2000 , @mes = 1
+
+--ex4
+create or alter procedure dbo.insere_linha (@id int, @placa varchar(20), @modelo varchar(20), @tipo varchar(20), @valor int) as
+begin
+insert into Carro(id_carro, placa, modelo, tipo, valor)
+values(@id, @placa, @modelo, @tipo, @valor)
+end
+
+execute dbo.insere_linha @id = 5, @placa = 'GOL-5555', @modelo = 'Volkswagen Gol', @tipo = 'Hatch', @valor = 80000
+
+--ex5
+create or alter procedure dbo.altera_valor (@id int, @valor int) as
+begin
+update Carro
+set valor = @valor
+where id_carro = @id
+end
+
+execute dbo.altera_valor @id = 5, @valor = 75000
+
+--ex6
+create or alter procedure dbo.exclui_carro (@id int) as
+begin
+delete from Carro
+where id_carro = @id
+end
+
+execute dbo.exclui_carro @id = 5

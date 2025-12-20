@@ -1,0 +1,36 @@
+---Resoluçao 6
+-- Ex1
+SELECT * FROM FactSales;
+SELECT SUM(SalesQuantity) AS 'Quantidade Vendida', SUM(ReturnQuantity) AS 'Quantidade Devolvida' FROM FactSales
+WHERE ChannelKey = 1;
+
+-- Ex2
+SELECT * FROM DimCustomer;
+SELECT AVG(YearlyIncome) AS 'Media Salarial' FROM DimCustomer
+WHERE Occupation = 'professional';
+
+-- Ex3
+SELECT TOP(1) EmployeeCount AS Funcionarios, StoreName AS 'Nome Loja' FROM DimStore
+ORDER BY EmployeeCount DESC;
+
+SELECT TOP(1) EmployeeCount AS Funcionarios, StoreName AS 'Nome Loja' FROM DimStore
+WHERE EmployeeCount IS NOT NULL
+ORDER BY EmployeeCount ASC;
+
+-- Ex4
+SELECT COUNT(Gender) AS 'Qtd Funcionarios Masculino' FROM DimEmployee
+WHERE Gender = 'm';
+
+SELECT COUNT(Gender) AS 'Qtd Funcionarios Feminino' FROM DimEmployee
+WHERE Gender = 'f';
+
+SELECT TOP(1) FirstName, LastName, EmailAddress, HireDate FROM DimEmployee
+WHERE Gender = 'm'
+ORDER BY HireDate ASC;
+
+SELECT TOP(1) FirstName, LastName, EmailAddress, HireDate FROM DimEmployee
+WHERE Gender = 'f'
+ORDER BY HireDate ASC;
+
+-- Ex5
+SELECT COUNT(DISTINCT ColorName) AS 'Qta cor de produto', COUNT(DISTINCT BrandName) AS 'Qta de marcas do produto', COUNT(DISTINCT ClassName) AS 'Qta de classes do produto' FROM DimProduct;

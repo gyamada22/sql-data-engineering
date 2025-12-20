@@ -1,0 +1,52 @@
+---MODULO 16
+--ex1
+declare @ValorInicial int, @ValorFinal int
+set @ValorInicial = 1
+set @ValorFinal = 10
+
+while @ValorInicial < @ValorFinal
+begin
+print 'O valor do contador é: ' + convert(varchar,@ValorInicial)
+set @ValorInicial += 1
+end
+
+--ex2
+declare @ano int, @mensagem varchar(100), @quantidade int
+set @ano = 1996
+
+while @ano < 2004
+begin
+select @quantidade = Quantidade from (
+		select	 Year(HireDate) Ano, 
+				count(*)'Quantidade' 
+		from DimEmployee 
+		where Year(HireDate) between '1996' and '2003' 
+		group by Year(HireDate)) as T 
+where Ano = @ano
+
+-- outra opçao
+declare @anoinicio int = 1996,@anofinal int = 2003
+while @anoinicio <= @anofinal
+begin
+	declare @quantidade int = (select count(*) from DimEmployee where year(Hiredate)= @anoinicio)
+	print concat(@quantidade,' contrataçoes em ',@anoinicio)
+	set @anoinicio +=1
+end
+
+
+set @mensagem = convert(varchar,@quantidade) + ' contrataçoes em ' + convert(varchar,@ano)
+print @mensagem
+set @ano += 1
+end
+
+--ex3
+declare @inicio date, @final date
+set @inicio = '2021-01-01'
+set @final = '2021-12-31'
+
+create table Calendarioo(Dataa date)
+while @inicio < @final
+begin
+insert into Calendarioo(Dataa) values(@inicio)
+set @inicio = DATEADD(DAY,1,@inicio)
+end

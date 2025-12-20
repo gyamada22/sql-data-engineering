@@ -1,0 +1,83 @@
+---Resoluçao 7
+-- Ex1a
+SELECT TOP(100) * FROM FactSales;
+SELECT ChannelKey AS 'Key', SUM(SalesQuantity) AS 'Total de vendas' FROM FactSales
+GROUP BY ChannelKey;
+SELECT TOP(100) * FROM FactSales;
+
+-- Ex1b
+SELECT SUM(SalesQuantity) AS 'QTA total vendida', SUM(ReturnQuantity) AS 'QTA total devolvida', StoreKey AS 'ID das lojas' FROM FactSales
+GROUP BY StoreKey;
+
+-- Ex1c
+SELECT SUM(SalesAmount) AS 'Total Vendido', ChannelKey AS 'ID das lojas' FROM FactSales
+WHERE DateKey BETWEEN '20070101' AND '20081231'
+GROUP BY ChannelKey;
+
+-- Ex2a
+SELECT ProductKey AS 'Produto', SUM(SalesAmount) AS 'Valor total vendido' FROM FactSales
+GROUP BY ProductKey 
+HAVING SUM(SalesAmount) > 5000000
+ORDER BY SUM(SalesAmount);
+
+-- Ex2b
+SELECT TOP(10) ProductKey AS 'Produto', SUM(SalesAmount) AS 'Valor total vendido' FROM FactSales
+GROUP BY ProductKey 
+ORDER BY SUM(SalesAmount) DESC;
+
+-- Ex3a
+SELECT TOP(100) * FROM FactOnlineSales;
+SELECT CustomerKey AS 'ID', SUM(SalesQuantity) AS 'Compras feitas' FROM FactOnlineSales
+GROUP BY CustomerKey
+ORDER BY SUM(SalesQuantity) DESC;
+
+-- Ex3b
+SELECT TOP(3) ProductKey AS 'Produto', SUM(SalesQuantity) AS 'Compras feitas' FROM FactOnlineSales
+WHERE CustomerKey = 19037
+GROUP BY ProductKey 
+ORDER BY SUM(SalesQuantity) DESC;
+
+-- Ex4a
+SELECT * FROM DimProduct;
+SELECT COUNT(ProductName) AS 'Produto', BrandName AS 'Marca' FROM DimProduct
+GROUP BY BrandName;
+
+-- Ex4b
+SELECT AVG(UnitPrice), ClassName FROM DimProduct
+GROUP BY ClassName;
+
+-- Ex4c
+SELECT ColorName AS 'Cor', SUM(Weight) AS 'Peso' FROM DimProduct
+GROUP BY ColorName;
+
+-- Ex5
+SELECT SUM(Weight) AS 'Peso', StockTypeName FROM DimProduct
+WHERE BrandName = 'Contoso'
+GROUP BY StockTypeName
+ORDER BY SUM(Weight) DESC;
+
+-- Ex6
+SELECT BrandName, COUNT(DISTINCT ColorName) FROM DimProduct
+GROUP BY BrandName;
+
+-- Ex7
+SELECT * FROM DimCustomer;
+SELECT Gender, COUNT(Gender), AVG(YearlyIncome) FROM DimCustomer
+WHERE FirstName IS NOT NULL
+GROUP BY Gender;
+
+-- Ex8
+SELECT COUNT(FirstName) AS 'Qta de clientes', AVG(YearlyIncome) AS 'Media salarial', Education AS 'Nivel escolar' FROM DimCustomer
+WHERE FirstName IS NOT NULL
+GROUP BY Education;
+
+-- Ex9
+SELECT * FROM DimEmployee;
+SELECT DepartmentName AS 'Departamento', COUNT(FirstName) AS 'Qta de funcionarios' FROM DimEmployee
+WHERE EndDate IS NULL
+GROUP BY DepartmentName;
+
+-- Ex10
+SELECT SUM(VacationHours) AS 'Ferias', Title FROM DimEmployee
+WHERE Gender = 'f' AND DepartmentName IN ('Production', 'Marketing', 'Engineering', 'Finance') AND HireDate BETWEEN '1999-01-01' AND '2000-12-31' 
+GROUP BY Title;

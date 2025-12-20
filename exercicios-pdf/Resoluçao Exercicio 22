@@ -1,0 +1,15 @@
+---MODULO 22
+--EX1
+create table Carro(id_carro int, placa varchar(20), modelo varchar(30), tipo varchar(20))
+--a
+begin transaction tr_carro
+insert into carro(id_carro, placa, modelo, tipo) values
+	(6,'CDR-0090','Fiat Argo','Hatch')
+commit transaction tr_carro
+
+--b
+begin transaction upd_carro
+update carro
+set tipo = 'Sedan'
+where id_carro = 1
+commit transaction tr_carro

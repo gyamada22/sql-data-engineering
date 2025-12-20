@@ -1,0 +1,51 @@
+---MODULO 21
+--EX1
+create database AlugaFacil
+
+create sequence cliente_seq as int
+start with 1
+increment by 1
+no maxvalue
+no cycle
+
+create sequence carro_seq as int
+start with 1
+increment by 1
+no maxvalue
+no cycle
+
+create sequence locaçoes_seq as int
+start with 1
+increment by 1
+no maxvalue
+no cycle
+
+create table Cliente(
+		id_cliente int primary key,
+		nome_cliente varchar(100) not null,
+		cnh varchar(100) not null unique,
+		cartao varchar(100) not null)
+
+create table Carro(
+		id_carro int primary key,
+		placa varchar(100) not null unique,
+		modelo varchar(100) not null,
+		tipo varchar(100) not null check (tipo in('Hatch', 'Sedan','SUV')))
+
+create table Locacoes(
+		id_locacao int primary key,
+		data_locacao date not null,
+		data_devolucao date not null,
+		id_carro int not null,
+		id_cliente int not null,
+		constraint fk_idcarro foreign key(id_carro) references Carro(id_carro),
+		constraint fk_idcliente foreign key(id_cliente) references Cliente(id_cliente))
+
+insert into Cliente(id_cliente, nome_cliente, cnh, cartao) values
+	(next value for cliente_seq, 'Bia', '123456', '6985-1123-7854-3695'),
+	(next value for cliente_seq, 'Carlos', '654321', '5555-6457-8523-6578'),
+	(next value for cliente_seq, 'Renan', '987456', '8888-1234-1459-2345')
+
+drop sequence cliente_seq
+drop sequence carro_seq
+drop sequence locacoes_seq

@@ -1,0 +1,37 @@
+---Resoluçao 10
+-- Ex3
+DECLARE @nome VARCHAR(20), @data_nascimento DATETIME, @num_pets INT
+SET @nome = 'Andre'
+SET @data_nascimento = '10/02/1998'
+SET @num_pets = 2
+
+SELECT 'Meu nome é ' + @nome + ', nasci em ' + FORMAT(@data_nascimento,'dd/MM/yyyy') + ' e tenho ' + CAST(@num_pets AS VARCHAR(10)) + ' pets.';
+
+-- Ex4
+DECLARE @lojas VARCHAR(100)
+SET @lojas = ''
+
+SELECT @lojas = @lojas + StoreName + ' ' FROM DimStore WHERE FORMAT(CloseDate, 'yyyy/MM/dd') LIKE '2008%'
+PRINT 'As lojas fechadas no ano de 2008 foram: ' + @lojas;
+
+-- Ex5
+DECLARE @lista VARCHAR(200)
+SET @lista = ''
+
+SELECT @lista = @lista + ProductName + CHAR(10) FROM DimProduct
+JOIN DimProductSubcategory ON DimProduct.ProductSubcategoryKey = DimProductSubcategory.ProductSubcategoryKey
+WHERE ProductSubcategoryDescription = 'lamps'
+
+PRINT @lista;
+
+SELECT * FROM DimProduct;
+SELECT * FROM DimProductSubcategory;
+
+DECLARE @varIdSubcategoryia INT
+DECLARE @varNomeSubcategoryia VARCHAR(30)
+
+SET @varNomeSubcategoryia = 'Fans'
+SET @varIdSubcategoryia = (SELECT ProductSubcategoryKey FROM DimProductSubcategory WHERE ProductSubcategoryName = @varNomeSubcategoryia)
+
+SELECT * FROM DimProduct
+WHERE ProductSubcategoryKey = @varIdSubcategoryia;

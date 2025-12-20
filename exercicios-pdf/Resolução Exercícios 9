@@ -1,0 +1,112 @@
+---Resoluçao 9
+-- Ex1
+SELECT TOP 100 * FROM DimChannel;
+SELECT TOP 100 * FROM FactSales;
+SELECT TOP 100 * FROM DimStore;
+SELECT TOP 100 * FROM FactSales;
+SELECT TOP 100 * FROM DimDate;
+
+-- 1a
+SELECT SUM(fs.SalesQuantity), dc.ChannelName FROM DimChannel dc 
+JOIN FactSales fs ON dc.ChannelKey = fs.ChannelKey
+GROUP BY dc.ChannelName
+ORDER BY SUM(fs.SalesQuantity) DESC;
+
+-- 1b
+SELECT SUM(fs.SalesQuantity) AS 'Qta total vendida', SUM(fs.ReturnQuantity) AS 'Qta total devolvida', ds.StoreName AS 'Nome da loja' FROM DimStore ds
+JOIN FactSales fs ON ds.StoreKey = fs.StoreKey
+GROUP BY ds.StoreName;
+
+-- 1c
+SELECT CalendarYear AS Ano, CalendarMonthLabel AS Mes, SUM(SalesAmount) AS 'Total vendido' FROM FactSales 
+JOIN DimDate ON FactSales.DateKey = DimDate.DateKey
+GROUP BY CalendarMonthLabel, CalendarYear
+ORDER BY CalendarYear ASC;
+
+-- Ex2
+SELECT TOP 100 * FROM FactSales;
+SELECT TOP 100 * FROM DimProduct;
+
+-- 2a
+SELECT dp.ColorName, SUM(fs.SalesQuantity) AS 'Total vendido' FROM FactSales fs
+JOIN DimProduct dp ON dp.ProductKey = fs.ProductKey
+GROUP BY dp.ColorName
+ORDER BY SUM(fs.SalesQuantity) DESC;
+
+-- 2b
+SELECT dp.ColorName, SUM(fs.SalesQuantity) AS 'Total vendido' FROM FactSales fs
+JOIN DimProduct dp ON dp.ProductKey = fs.ProductKey
+GROUP BY dp.ColorName
+HAVING SUM(fs.SalesQuantity) > 3000000
+ORDER BY SUM(fs.SalesQuantity) DESC;
+
+-- Ex3
+SELECT ProductCategoryName AS 'Categoria', SUM(SalesQuantity) AS 'Qta vendida' FROM FactSales
+JOIN DimProduct ON FactSales.ProductKey = DimProduct.ProductKey
+JOIN DimProductSubcategory ON DimProductSubcategory.ProductSubcategoryKey = DimProduct.ProductSubcategoryKey
+JOIN DimProductCategory ON DimProductSubcategory.ProductCategoryKey = DimProductCategory.ProductCategoryKey
+GROUP BY ProductCategoryName;
+
+-- Ex4
+SELECT TOP 100 * FROM FactOnlineSales;
+SELECT TOP 100 * FROM DimCustomer;
+SELECT TOP 100 * FROM DimProduct;
+
+SELECT DimCustomer.CustomerKey, FirstName AS Nome, LastName AS Sobrenome, SUM(SalesQuantity) FROM FactOnlineSales
+JOIN DimCustomer ON DimCustomer.CustomerKey = FactOnlineSales.CustomerKey
+WHERE CustomerType = 'person'
+GROUP BY DimCustomer.CustomerKey, FirstName, LastName
+ORDER BY SUM(SalesQuantity) DESC;
+
+SELECT TOP 10 ProductName, SUM(SalesQuantity) FROM DimProduct
+JOIN FactOnlineSales ON FactOnlineSales.ProductKey = DimProduct.ProductKey
+WHERE CustomerKey = '7665'
+GROUP BY ProductName
+ORDER BY SUM(SalesQuantity) DESC;
+
+-- Ex5
+SELECT Gender AS 'Sexo', SUM(SalesQuantity) AS 'Total produtos comprados' FROM FactOnlineSales
+JOIN DimCustomer ON DimCustomer.CustomerKey = FactOnlineSales.CustomerKey
+WHERE Gender IS NOT NULL
+GROUP BY Gender;
+
+-- Ex6
+SELECT TOP 100 * FROM DimCurrency;
+SELECT TOP 100 * FROM FactExchangeRate;
+
+SELECT CurrencyDescription AS Moeda, AVG(AverageRate) AS Media FROM DimCurrency
+JOIN FactExchangeRate ON FactExchangeRate.CurrencyKey = DimCurrency.CurrencyKey
+GROUP BY CurrencyDescription
+HAVING AVG(AverageRate) BETWEEN 1 AND 10;
+
+-- Ex7
+SELECT TOP 100 * FROM FactStrategyPlan;
+SELECT TOP 100 * FROM DimScenario;
+
+SELECT ScenarioName, SUM(Amount) FROM DimScenario
+JOIN FactStrategyPlan ON DimScenario.ScenarioKey = FactStrategyPlan.ScenarioKey
+GROUP BY ScenarioName
+HAVING ScenarioName IN ('actual', 'Budget');
+
+-- Ex8
+SELECT TOP 100 * FROM FactStrategyPlan;
+SELECT TOP 100 * FROM DimDate;
+
+SELECT SUM(Amount), CalendarYear FROM FactStrategyPlan
+JOIN DimDate ON DimDate.DateKey = FactStrategyPlan.DateKey
+GROUP BY CalendarYear;
+
+-- Ex9
+SELECT TOP 100 * FROM DimProduct;
+SELECT TOP 100 * FROM DimProductSubcategory;
+
+SELECT ProductSubcategoryName AS Subcategoria, COUNT(ProductName) FROM DimProduct
+JOIN DimProductSubcategory ON DimProduct.ProductSubcategoryKey = DimProductSubcategory.ProductSubcategoryKey
+WHERE BrandName = 'contoso' AND ColorName = 'silver'
+GROUP BY ProductSubcategoryName;
+
+-- Ex10
+SELECT BrandName AS Marca, ProductSubcategoryName AS Subcategoria, COUNT(ProductName) FROM DimProduct
+JOIN DimProductSubcategory ON DimProduct.ProductSubcategoryKey = DimProductSubcategory.ProductSubcategoryKey
+GROUP BY BrandName, ProductSubcategoryName
+ORDER BY BrandName;

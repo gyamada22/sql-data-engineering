@@ -1,0 +1,30 @@
+--- MODULO 20
+--EX1
+CREATE DATABASE AlugaFacil
+
+create table Cliente(
+        id_cliente int primary key identity(1,1),
+        nome_cliente varchar(30) not null,
+        cnh int not null unique,
+        cartao int not null)
+
+create table Carro(
+        id_carro int primary key identity(1,1),
+        placa int not null unique,
+        modelo varchar(100) not null,
+        tipo varchar(50) not null)
+
+create table Locacoes(
+        id_locacao int primary key identity(1,1),
+        data_locacao date not null,
+        data_devolucao date not null,
+        id_carro int not null,
+        id_cliente int not null,
+        constraint fk_idcarro foreign key(id_carro) references carro(id_carro),
+        constraint fk_idcliente foreign key(id_cliente) references cliente(id_cliente))
+
+select * from cliente
+select * from carro
+select * from locacoes
+
+drop database alugafacil

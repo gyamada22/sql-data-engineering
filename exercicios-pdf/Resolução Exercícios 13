@@ -1,0 +1,112 @@
+---Modulo 13
+--ex1a
+go
+create view vwProdutos as
+select Productname, Colorname, Unitprice, Unitcost from DimProduct
+go
+
+--ex1b
+go
+create view vwFuncionarios as
+select Firstname, Birthdate, Departmentname from DimEmployee
+go
+
+--ex1c
+go
+create view vwLojas
+select Storekey, Storename, Opendate from DimStore
+go
+
+--ex2
+go
+create view vwClientes as
+select  concat(Firstname,' ', Lastname) 'Nome completo',
+		case
+			when gender = 'M' then 'Masculino'
+			when gender = 'F' then 'Feminino'
+			else 'empresa'
+		end 'Genero',
+		Emailaddress 'Email',
+		format(Yearlyincome,'c','pt-br') 'Renda anual'
+from DimCustomer
+go
+
+--ex3a
+go
+create view vwLojasativas as
+select * from Dimstore
+where status = 'on'
+go
+
+--ex3b
+go
+create view vwFuncionariosmkt as
+select	Firstname 'Nome completo',
+		Emailaddress 'email',
+		Departmentname 'Departamento'
+from DimEmployee
+where Departmentname = 'Marketing'
+go
+
+--ex3c
+go
+create view vwContosoLitwareSilver as
+select * from DimProduct
+where Colorname = 'Silver' and (Brandname = 'Contoso' or Brandname = 'Litware')
+go
+
+--ex4
+go
+create view vwTotalvendidoprodutos as
+select	dp.Productname 'Nome do produto',
+		sum(fs.Salesquantity) 'Qtd vendida'
+from FactSales fs
+join DimProduct dp on fs.ProductKey = dp.ProductKey
+group by dp.Productname
+go
+
+
+--ex5a
+go
+alter view vwProdutos as
+select Productname, Colorname, Unitprice, Unitcost, Brandname from DimProduct
+go
+
+--ex5b
+go
+alter view vwFuncionarios as
+select Firstname, Birthdate, Departmentname from DimEmployee
+where gender = 'F'
+go
+
+--ex5c
+go
+alter view vwLojas
+select Storekey, Storename, Opendate from DimStore
+where Closedate is null
+go
+
+--6a
+go
+create view vw_6a as
+select	Brandname 'Marca',
+		count(Productname)'Qtd de produtos por marca'
+from Dimproduct
+group by Brandname
+go
+
+--6b
+go
+alter view vw_6a as
+select	Brandname 'Marca',
+		count(Productname)'Qtd de produtos por marca',
+		sum(Weight) 'Peso total'
+from Dimproduct
+group by Brandname
+go
+
+--6c
+go
+drop view vw_6a
+go
+

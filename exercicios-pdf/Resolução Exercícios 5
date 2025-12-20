@@ -1,0 +1,52 @@
+---Resoluçao 5
+-- Ex1
+SELECT TOP(100) * FROM FactSales
+ORDER BY SalesAmount DESC;
+
+-- Ex2
+SELECT TOP(10) * FROM DimProduct 
+ORDER BY UnitPrice DESC, Weight DESC, AvailableForSaleDate ASC;
+
+-- Ex3
+SELECT ProductName AS Produto, Weight AS Peso FROM DimProduct
+WHERE BrandName = 'contoso' AND Weight > 100
+ORDER BY Weight DESC;
+
+-- Ex4
+SELECT DISTINCT StoreName AS 'Nome da Loja', OpenDate AS 'Data de abertura', EmployeeCount AS 'Qta de funcionarios' FROM DimStore
+WHERE StoreType = 'store' AND CloseReason IS NULL;
+
+-- Ex5
+SELECT ProductKey, ClassID, StyleID FROM DimProduct
+WHERE BrandName = 'litware' AND ProductName LIKE '%Theater%' AND AvailableForSaleDate LIKE '20090315';
+
+-- Ex6a
+SELECT StoreName FROM DimStore
+WHERE StoreType = 'store' AND Status = 'off';
+
+-- Ex6b
+SELECT StoreName FROM DimStore
+WHERE StoreType = 'store' AND CloseDate IS NOT NULL;
+
+-- Ex7
+SELECT StoreName AS 'Categoria 1' FROM DimStore
+WHERE EmployeeCount BETWEEN 1 AND 20;
+
+SELECT StoreName AS 'Categoria 2' FROM DimStore
+WHERE EmployeeCount BETWEEN 21 AND 50;
+
+SELECT StoreName AS 'Categoria 3' FROM DimStore
+WHERE EmployeeCount > 51;
+
+-- Ex8
+SELECT ProductKey AS ID, ProductName AS 'Nome do Produto', UnitPrice AS 'Preço' FROM DimProduct
+WHERE ProductDescription LIKE '%LCD%';
+
+-- Ex9
+SELECT ProductName FROM DimProduct
+WHERE ColorName IN ('green', 'orange', 'black', 'silver', 'pink') AND BrandName IN ('contoso', 'litware', 'fabrikam');
+
+-- Ex10
+SELECT ProductName AS 'Nome do Produto', ColorName, UnitPrice FROM DimProduct
+WHERE BrandName = 'contoso' AND ColorName = 'silver' AND Weight BETWEEN 10 AND 30
+ORDER BY UnitPrice DESC;

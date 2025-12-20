@@ -1,0 +1,65 @@
+---MODULO 23
+--EX1
+create function dbo.calcula_tempo(@data_inicial date, @data_final date = null)
+returns int
+as
+begin
+	return datediff(
+				year, 
+				@data_inicial, 
+				isnull(@data_final,getdate()))
+end
+go
+select 
+		Firstname,
+		StartDate,
+		EndDate,
+		dbo.calcula_tempo(StartDate, EndDate) 'Tempo trabalhado'
+from DimEmployee
+
+--EX2
+create function dbo.bonifica(@salario float, @presenca date = null)
+returns float
+as begin
+if @presenca is null
+set @salario = 1.05*@salario
+return @salario
+end 
+go
+
+select	
+		FirstName,
+		LastName,
+		BaseRate,
+		Status,
+		dbo.bonifica(BaseRate,EndDate)'Bonificaçao'
+from DimEmployee
+
+--ex3
+create function dbo.genero(@genero varchar(20))
+returns table
+as
+return 
+(	select
+		Firstname,
+		LastName,
+		Gender
+	from DimCustomer
+	where Gender = @genero
+)
+
+select * from dbo.genero('M')
+
+--EX4
+create function dbo.marca(@marca varchar(50))
+returns table
+as
+return (select 
+			ColorName,
+			count(ProductName)'Qtd produtos por cor'
+		from DimProduct 
+		where BrandName = @marca
+		group by ColorName
+)
+
+select * from dbo.marca('Contoso')

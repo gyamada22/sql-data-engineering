@@ -1,0 +1,127 @@
+---Modulo 17
+create view vwprodutos as 
+select	
+		Brandname 'Marca',
+		Colorname 'Cor',
+		Count(*) 'Quantidade_Vendida',
+		Round( Sum(SalesAmount), 2) 'Receita_Total'
+from Dimproduct join Factsales
+on Dimproduct.ProductKey = Factsales.Productkey
+group by Brandname, Colorname
+
+--ex1
+select	*,
+		sum(Quantidade_Vendida) over() 'Qtd total vendida'
+from vwprodutos
+order by marca
+
+--ex2
+select	*,
+		sum(Quantidade_Vendida) over() 'Qtd total vendida',
+		sum(Quantidade_Vendida) over(partition by marca) 'Qtd total vendida por marca'
+from vwprodutos
+order by marca
+
+--ex3 
+select	*,
+		sum(Quantidade_Vendida) over() 'Qtd total vendida',
+		sum(Quantidade_Vendida) over(partition by marca) 'Qtd total vendida por marca',
+		format( cast(sum(Quantidade_Vendida) over(partition by marca) as decimal(10,2) )/ (sum(Quantidade_Vendida) over()), 'P') '% participaçao'
+from vwprodutos
+order by marca
+
+--ex4
+select	Marca,
+		Cor,
+		Quantidade_Vendida,
+		rank() over(order by Quantidade_Vendida desc)'Rank'
+from vwprodutos
+where Marca = 'Contoso'
+
+--desafio1
+create view vwHistoricoLojas as
+select	row_number() over(order by (Calendarmonth)) 'ID',
+		CalendarYear 'Ano',
+		Calendarmonthlabel 'Mes',	
+		count(opendate) 'Qtd_lojas'
+from dimdate left join dimstore
+on dimdate.datekey = dimstore.opendate
+group by CalendarYear,Calendarmonthlabel,Calendarmonth
+
+--ex5
+select  *,
+		sum(Qtd_lojas)over(order by ID rows between 2 preceding and current row) 'Soma movel'
+from vwHistoricoLojas
+
+--ex6
+select  *,
+		sum(Qtd_lojas) over(order by Ano rows between unbounded preceding and current row) 'Qtd lojas abertas'
+from vwHistoricoLojas
+
+--desafio2
+--passo 1
+create database Desafio
+use Desafio
+
+--passo 2
+Create table Calendarioo(data date) 
+
+declare @anoinicial int = (select YEAR(min(datefirstpurchase)) from ContosoRetailDw.dbo.dimcustomer)
+declare @anofinal int= (select YEAR(max(datefirstpurchase)) from ContosoRetailDw.dbo.dimcustomer)
+
+declare @datainicial date = datefromparts(@anoinicial,1,1)
+declare @datafinal date = datefromparts(@anofinal,12,31)
+
+while @datainicial <= @datafinal
+begin
+insert into Calendarioo(data)
+values(@datainicial)
+set @datainicial = DATEADD(day,1,@datainicial)
+end
+
+--passo 4
+alter table Calendarioo
+add Ano int,
+	Mes int,
+	Dia int,
+	AnoMes int,
+	NomesMes int
+
+UPDATE calendarioo set Ano = Year(data)
+UPDATE calendarioo set Mes = Month(data)
+UPDATE calendarioo set Dia = day(data)
+UPDATE calendarioo set AnoMes = concat(year(data), format(month(data), '00'))
+UPDATE calendarioo set NomesMes = format (data,'MMMM')
+
+--passo 5
+create view vwNovosClientes as
+select
+		row_number() over(order by AnoMes) 'ID',
+		Ano,
+		NomesMes,
+		count(DimCustomer.DateFirstPurchase) 'Novos_Clientes'
+frrom calendarioo
+left join ContosoRetailDW.dbo.DimCustomer
+on calendarioo.data = DimCustomer.DateFirstPurchase
+group by Ano, NomesMes, AnoMes
+select * from vwNovosClientes
+
+--ex7
+select	*,
+		sum(Novos_Clientes) over(order by ID rows between 2 preceding and current row) 'Soma movel',
+		avg(Novos_Clientes) over(order by ID rows between 2 preceding and current row) 'Media movel',
+		sum(Novos_Clientes) over(order by ID rows between unbounded preceding and current row) 'Acumulado total',
+		sum(Novos_Clientes) over(partition by Ano order by ID rows between unbounded preceding and current row) 'Acumulado total por ano'
+from vwNovosClientes
+
+--ex8
+select  *,
+		format(
+			cast( Novos_Clientes - lag(Novos_Clientes,12) over(order by id) as decimal(10,2)) /
+			nullif( lag(Novos_Clientes,12) over(order by id) ,0),
+			'p') 'YoY %',
+		format(
+			cast( Novos_Clientes - lag(Novos_Clientes,1) over(order by id) as decimal(10,2)) /
+			nullif( lag(Novos_Clientes,1) over(order by id) ,0),
+			'p') 'MoM %'
+from vwNovosClientes

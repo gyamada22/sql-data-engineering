@@ -1,0 +1,44 @@
+---Resoluçao 11
+--ex1
+--1a
+select ProductName 'Nome do produto', len(ProductName) 'Qtd de caracteres do produto'from DimProduct
+order by len(ProductName) desc
+
+--1b
+select avg(len(ProductName)) 'Media de caracteres' from DimProduct
+
+--1c
+select ProductName 'Nome do produto', replace(replace(ProductName,BrandName,''),ColorName,'') 'Produto reduzido' from DimProduct
+
+--1d
+select avg(len(replace(replace(ProductName,BrandName,''),ColorName,''))) 'Media de caracteres nova' from DimProduct
+
+--ex2
+select Stylename, translate(StyleName,'0123456789','ABCDEFGHIJ')'StyleName alterado' from DimProduct
+
+--ex3
+select	concat(FirstName,' ',Lastname)'Nome completo', 
+		Emailaddress 'Email',
+		substring(Emailaddress,1,Charindex('@',Emailaddress)-1) 'Id do email', 
+		FirstName + cast(day (Birthdate) as varchar(10)) 
+from DimEmployee
+
+--ex4
+select Firstname, Emailaddress, Addressline1, Datefirstpurchase from DimCustomer
+where year(Datefirstpurchase) = '2001'
+
+--ex5
+select	Firstname 'Primeiro nome',
+		Emailaddress'Segundo nome',
+		Hiredate'Data admissao', 
+		Day(Hiredate)'Dia admissao', 
+		format (Hiredate,'MMMM','PT-Br')'Mes admissao', 
+		Year(Hiredate)'Ano admissao'
+from DimEmployee
+
+--ex6 - exercicio incompleto necessitaria condicional, next module
+select	Storename 'Nome da loja',
+		datediff(day, Opendate, getdate()) 'Dias em atividade'
+from DimStore
+where Closedate is null
+order by datediff(day, Opendate, Closedate) desc
