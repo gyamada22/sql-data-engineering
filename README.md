@@ -29,8 +29,8 @@
 ### 📈 Progresso Atual
 | Dificuldade | Resolvidos |
 |------------|------------|
-| 🟢 Easy | 32 |
-| 🟡 Medium | 5 |
+| 🟢 Easy | 34 |
+| 🟡 Medium | 6 |
 | 🔴 Hard | 0 |
 
 📌 Todas as soluções incluem:
