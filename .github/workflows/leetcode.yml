@@ -1,0 +1,27 @@
+name: Update LeetCode Stats
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Diariamente à meia-noite UTC
+  workflow_dispatch:      # Permite executar manualmente
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Generate LeetCode Stats SVG
+        run: |
+          curl -o leetcode.svg "https://leetcard.jacoblin.cool/gyamada22?theme=dark&font=source_code_pro"
+        
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add leetcode.svg
+          git commit -m "📈 Update LeetCode stats" || echo "No changes to commit"
+          git push
