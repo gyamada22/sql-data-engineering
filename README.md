@@ -9,7 +9,7 @@
 - ✅ **SQL Server — Intermediário consolidado**
 - 🔁 **LeetCode SQL:** 🔥 40+ problemas resolvidos e documentados (prática diária para consolidar)
 - 📚 Conteúdo teórico concluído, foco atual em **fixação, performance e aplicação**
-- 🧠 Estudo orientado a **resolução de problemas reais**
+- 🧠 Abordagem orientada a **resolução de problemas analíticos**
 
 ---
 
@@ -18,7 +18,7 @@
 - **Fundamentos & Intermediário:** ✅ 100% concluído  
 - **Avançado:** 🔄 em evolução (performance, otimização, modelagem)
 - **LeetCode SQL:** prática diária (3–5 exercícios/dia), soluções documentadas
-- **Total de exercícios práticos durante o curso:** 110+
+- **Exercícios práticos no curso:** 110+
 
 ---
 
