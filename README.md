@@ -1,4 +1,4 @@
-# 🗄️ SQL Data Journey
+# 🗄️ SQL Server — Data Analysis & Analytical Thinking Journey
 
 > Jornada prática em **SQL Server**, com foco em **análise de dados**, baseada em estudo estruturado + prática diária documentada.
 
