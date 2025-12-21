@@ -30,7 +30,7 @@
 | Dificuldade | Resolvidos |
 |------------|------------|
 | 🟢 Easy | 34 |
-| 🟡 Medium | 6 |
+| 🟡 Medium | 9 |
 | 🔴 Hard | 0 |
 
 📌 Todas as soluções incluem:
