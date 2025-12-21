@@ -2,7 +2,7 @@
 
 ## 📊 Visão Geral
 
-**Total de Soluções:** 40 | **Easy:** 34 | **Medium:** 9
+**Total de Soluções:** 43 | **Easy:** 34 | **Medium:** 9
 
 **Última Atualização:** 20 de Dezembro de 2025
 
