@@ -2,9 +2,9 @@
 
 ## 📊 Visão Geral
 
-**Total de Soluções:** 43 | **Easy:** 34 | **Medium:** 12
+**Total de Soluções:** 50 | **Easy:** 37 | **Medium:** 13
 
-**Última Atualização:** 21 de Dezembro de 2025
+**Última Atualização:** 23 de Dezembro de 2025
 
 - Este repositório documenta minha jornada de aprendizado e prática de SQL através da resolução de problemas no LeetCode. 
 - Meu objetivo é demonstrar domínio progressivo de conceitos, pensamento analítico e habilidades de resolução de problemas relevantes.
@@ -35,20 +35,26 @@
 | 1164 | Product Price at a Given Date | `JOIN`, `WHERE`, `MIN`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1164.%20Product%20Price%20at%20a%20Given%20Date.md) |
 | 626  | Exchange Seats | `JOIN`, `CASE`, `ROW_NUMBER`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/medium/626.%20Exchange%20Seats.md) |
 
-### 🟢 **Problemas Easy (34)**
+### 🟢 **Problemas Easy (37)**
 
-| ID | Problema | Tópicos Principais | Link para a Solução |
-|----|----------|-------------------|---------------------|
-| 175 | Combine Two Tables | `JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/175*.%20Combine%20Two%20Tables.md) |
-| 181 | Employees Earning More Than Their Managers | `SELF JOIN`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/181*.%20Employees%20Earning%20More%20Than%20Their%20Managers.md) |
-| 197 | Rising Temperature | `LAG()`, `DATEDIFF` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/197-rising-temperature.md) |
-| 577 | Employee Bonus | `LEFT JOIN`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/577-Employee-Bonus.md) |
-| 584 | Find Customer Referee | `WHERE`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/584.%20Find%20Customer%20Referee.md) |
-| 595 | Big Countries | `WHERE`, `OR` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/595.%20Big%20Countries.md) |
-| 596 | Classes More Than 5 Students | `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/596.%20Classes%20More%20Than%205%20Students.md) |
-| 610 | Triangle Judgement | `CASE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/610.%20Triangle%20Judgement.md) |
-| 619 | Biggest Single Number | `GROUP BY`, `HAVING`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/619.%20Biggest%20Single%20Number.md) |
-| 620 | Not Boring Movies | `WHERE`, `MOD`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/620.%20Not%20Boring%20Movies.md) |
+| ID   | Problema | Tópicos Principais | Link para a Solução |
+|------|----------|-------------------|---------------------|
+| 175  | Combine Two Tables | `JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/175*.%20Combine%20Two%20Tables.md) |
+| 181  | Employees Earning More Than Their Managers | `SELF JOIN`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/181*.%20Employees%20Earning%20More%20Than%20Their%20Managers.md) |
+| 182  | Duplicate Emails | `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/182.%20Duplicate%20Emails.md) |
+| 183  | Customers Who Never Order | `LEFT JOIN`, `NULL` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/183.%20Customers%20Who%20Never%20Order.md) |
+| 196  | Delete Duplicate Emails | `CTE`, `ROW_NUMBER`, `DELETE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1822.%20Delete%20Duplicate%20Emails.md) |
+| 197  | Rising Temperature | `LAG()`, `DATEDIFF` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/197-rising-temperature.md) |
+| 511  | Game Play Analysis I | `DENSE_RANK`, `Window Function` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/511.%20Game%20Play%20Analysis%20I.md) |
+| 577  | Employee Bonus | `LEFT JOIN`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/577-Employee-Bonus.md) |
+| 584  | Find Customer Referee | `WHERE`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/584.%20Find%20Customer%20Referee.md) |
+| 595  | Big Countries | `WHERE`, `OR` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/595.%20Big%20Countries.md) |
+| 596  | Classes More Than 5 Students | `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/596.%20Classes%20More%20Than%205%20Students.md) |
+| 610  | Triangle Judgement | `CASE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/610.%20Triangle%20Judgement.md) |
+| 619  | Biggest Single Number | `GROUP BY`, `HAVING`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/619.%20Biggest%20Single%20Number.md) |
+| 620  | Not Boring Movies | `WHERE`, `MOD`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/620.%20Not%20Boring%20Movies.md) |
+| 1068 | Product Sales Analysis I | `INNER JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1068.%20Product%20Sales%20Analysis%20I.md) |
+| 1075 | Project Employees I | `JOIN`, `AVG`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1075.%20Project%20Employees.md) |
 | 1141 | User Activity for the Past 30 Days I | `WHERE`, `COUNT`, `DISTINCT` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1141.%20User%20Activity%20for%20the%20Past%2030%20Days%20I.md) |
 | 1148 | Article Views I | `DISTINCT`, `WHERE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1148.%20Article%20Views%20I.md) |
 | 1211 | Queries Quality and Percentage | `AVG`, `CASE`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1211.%20Queries%20Quality%20and%20Percentage.md) |
@@ -68,11 +74,9 @@
 | 1803 | List The Products Ordered in a Period | `JOIN`, `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1803.%20List%20The%20Products%20Ordered%20in%20a%20Period.md) |
 | 1821 | Group Sold Products By The Date | `GROUP BY`, `STRING_AGG` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1821.%20Group%20Sold%20Products%20By%20The%20Date.md) |
 | 1824 | Find Users With Valid E-Mails | `LIKE`, Expressões com `%` e `_` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1824.%20Find%20Users%20With%20Valid%20E%E2%80%91Mails.md) |
-| 196 | Delete Duplicate Emails | CTE, `ROW_NUMBER`, `DELETE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1822.%20Delete%20Duplicate%20Emails.md) |
 | 1978 | Employees Whose Manager Left the Company | `Subquery`, `NOT IN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1978.%20Employees%20Whose%20Manager%20Left%20the%20Company.md) |
 | 2356 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)`, `GROUP BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/2356.%20Number%20of%20Unique%20Subjects%20Taught%20by%20Each%20Teacher.md) |
-| 1068 | Product Sales Analysis I | `INNER JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1068.%20Product%20Sales%20Analysis%20I.md) |
-| 1075 | Project Employees I | `JOIN`, `AVG`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1075.%20Project%20Employees.md) |
+
 
 ---
 
