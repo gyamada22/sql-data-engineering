@@ -35,7 +35,7 @@
 | 1164 | Product Price at a Given Date | `JOIN`, `WHERE`, `MIN`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1164.%20Product%20Price%20at%20a%20Given%20Date.md) |
 | 626  | Exchange Seats | `JOIN`, `CASE`, `ROW_NUMBER`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/medium/626.%20Exchange%20Seats.md) |
 
-### 🟢 **Problemas Easy (37)**
+### 🟢 **Problemas Easy (41)**
 
 | ID   | Problema | Tópicos Principais | Link para a Solução |
 |------|----------|-------------------|---------------------|
@@ -48,11 +48,14 @@
 | 511  | Game Play Analysis I | `DENSE_RANK`, `Window Function` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/511.%20Game%20Play%20Analysis%20I.md) |
 | 577  | Employee Bonus | `LEFT JOIN`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/577-Employee-Bonus.md) |
 | 584  | Find Customer Referee | `WHERE`, `NULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/584.%20Find%20Customer%20Referee.md) |
+| 586  | Customer Placing the Largest Number of Orders | `GROUP BY`, `COUNT`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/586.%20Customer%20Placing%20the%20Largest%20Number%20of%20Orders.md) |
 | 595  | Big Countries | `WHERE`, `OR` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/595.%20Big%20Countries.md) |
 | 596  | Classes More Than 5 Students | `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/596.%20Classes%20More%20Than%205%20Students.md) |
+| 607  | Sales Person | `NOT IN`, `SUBQUERY`, `JOIN` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/607.%20Sales%20Person.md) |
 | 610  | Triangle Judgement | `CASE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/610.%20Triangle%20Judgement.md) |
 | 619  | Biggest Single Number | `GROUP BY`, `HAVING`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/619.%20Biggest%20Single%20Number.md) |
 | 620  | Not Boring Movies | `WHERE`, `MOD`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/620.%20Not%20Boring%20Movies.md) |
+| 627  | Swap Sex of Employees | `UPDATE`, `CASE` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/627.%20Swap%20Sex%20of%20Employees.md) |
 | 1068 | Product Sales Analysis I | `INNER JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1068.%20Product%20Sales%20Analysis%20I.md) |
 | 1075 | Project Employees I | `JOIN`, `AVG`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1075.%20Project%20Employees.md) |
 | 1141 | User Activity for the Past 30 Days I | `WHERE`, `COUNT`, `DISTINCT` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1141.%20User%20Activity%20for%20the%20Past%2030%20Days%20I.md) |
@@ -62,10 +65,11 @@
 | 1280 | Students and Examinations | `CROSS JOIN`, `COUNT`, `ISNULL` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1280.%20Students%20and%20Examinations.md) |
 | 1378 | Replace Employee ID With The Unique Identifier | `LEFT JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1378.%20Replace%20Employee%20ID%20With%20The%20Unique%20Identifier.md) |
 | 1581 | Customer Who Visited but Did Not Make Any Transactions | `LEFT JOIN`, `COUNT`, `GROUP BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1581.%20Customer%20Who%20Visited%20but%20Did%20Not%20Make%20Any%20Transactions.md) |
-| 1633 | Percentage of Users Attended a Contest | `GROUP BY`, `ROUND`, `Subquery` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1633.%20Percentage%20of%20Users%20Attended%20a%20Contest.md) |
+| 1633 | Percentage of Users Attended a Contest | `GROUP BY`, `ROUND`, `SUBQUERY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1633.%20Percentage%20of%20Users%20Attended%20a%20Contest.md) |
 | 1661 | Average Time of Process per Machine | `SELF JOIN`, `AVG`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1661.%20Average%20Time%20of%20Process%20per%20Machine.md) |
 | 1667 | Fix Names in a Table | `CONCAT`, `UPPER`, `LOWER`, `SUBSTRING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1667.%20Fix%20Names%20in%20a%20Table.md) |
 | 1683 | Invalid Tweets | `LEN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1683.%20Invalid%20Tweets.md) |
+| 1693 | Daily Leads and Partners | `GROUP BY`, `COUNT(DISTINCT)`, `CTE` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/easy/1693.%20Daily%20Leads%20and%20Partners.md) |
 | 1729 | Find Followers Count | `COUNT`, `GROUP BY`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1729.%20Find%20Followers%20Count.md) |
 | 1731 | The Number of Employees Which Report to Each Employee | `SELF JOIN`, `COUNT`, `GROUP BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1731.%20The%20Number%20of%20Employees%20Which%20Report%20to%20Each%20Employee.md) |
 | 1756 | Patients With a Condition | `LIKE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1756.%20Patients%20With%20a%20Condition.md) |
@@ -73,10 +77,9 @@
 | 1789 | Primary Department for Each Employee | `GROUP BY`, `CASE`, `COUNT` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1789.%20Primary%20Department%20for%20Each%20Employee.md) |
 | 1803 | List The Products Ordered in a Period | `JOIN`, `GROUP BY`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1803.%20List%20The%20Products%20Ordered%20in%20a%20Period.md) |
 | 1821 | Group Sold Products By The Date | `GROUP BY`, `STRING_AGG` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1821.%20Group%20Sold%20Products%20By%20The%20Date.md) |
-| 1824 | Find Users With Valid E-Mails | `LIKE`, Expressões com `%` e `_` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1824.%20Find%20Users%20With%20Valid%20E%E2%80%91Mails.md) |
-| 1978 | Employees Whose Manager Left the Company | `Subquery`, `NOT IN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1978.%20Employees%20Whose%20Manager%20Left%20the%20Company.md) |
+| 1824 | Find Users With Valid E-Mails | `LIKE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1824.%20Find%20Users%20With%20Valid%20E%E2%80%91Mails.md) |
+| 1978 | Employees Whose Manager Left the Company | `SUBQUERY`, `NOT IN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/1978.%20Employees%20Whose%20Manager%20Left%20the%20Company.md) |
 | 2356 | Number of Unique Subjects Taught by Each Teacher | `COUNT(DISTINCT)`, `GROUP BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/easy/2356.%20Number%20of%20Unique%20Subjects%20Taught%20by%20Each%20Teacher.md) |
-
 
 ---
 
