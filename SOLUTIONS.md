@@ -88,12 +88,12 @@
 
 ### 🎯 **Habilidades Demonstradas**
 Este portfólio cobre uma ampla gama de conceitos essenciais de SQL:
-- **✅ Junção de Tabelas & Relacionamentos:** `INNER JOIN`, `LEFT JOIN`, `SELF JOIN` (ex.: #175, #181, #570).
-- **✅ Agregação & Análise de Grupos:** `GROUP BY`, `HAVING`, `COUNT/SUM/AVG`, `COUNT(DISTINCT)` (ex.: #596, #570, #2356).
-- **✅ Funções de Janela (Window Functions):** `ROW_NUMBER()`, `LAG()` (ex.: #1174, #197).
-- **✅ Manipulação de Texto & Datas:** `CONCAT`, `UPPER/LOWER`, `SUBSTRING`, `LIKE`, `FORMAT`, `DATEDIFF` (ex.: #1667, #1824, #1193).
-- **✅ Lógica Condicional & Controle de Fluxo:** `CASE WHEN`, `IFNULL/COALESCE`, `NULLIF` (ex.: #610, #1251, #1211).
-- **✅ Subconsultas & CTEs:** Subqueries em `WHERE/SELECT`, Common Table Expressions (ex.: #1978, #196).
+- **Junção de Tabelas & Relacionamentos:** `INNER JOIN`, `LEFT JOIN`, `SELF JOIN` (ex.: #175, #181, #570).
+- **Agregação & Análise de Grupos:** `GROUP BY`, `HAVING`, `COUNT/SUM/AVG`, `COUNT(DISTINCT)` (ex.: #596, #570, #2356).
+- **Funções de Janela (Window Functions):** `ROW_NUMBER()`, `LAG()` (ex.: #1174, #197).
+- **Manipulação de Texto & Datas:** `CONCAT`, `UPPER/LOWER`, `SUBSTRING`, `LIKE`, `FORMAT`, `DATEDIFF` (ex.: #1667, #1824, #1193).
+- **Lógica Condicional & Controle de Fluxo:** `CASE WHEN`, `IFNULL/COALESCE`, `NULLIF` (ex.: #610, #1251, #1211).
+- **Subconsultas & CTEs:** Subqueries em `WHERE/SELECT`, Common Table Expressions (ex.: #1978, #196).
 
 ---
 
@@ -103,7 +103,7 @@ Este portfólio cobre uma ampla gama de conceitos essenciais de SQL:
 Este portfólio é mais do que uma lista de exercícios; é uma demonstração de:
 1.  **Persistência e Aprendizado Contínuo:** Compromisso em melhorar habilidades técnicas de forma consistente.
 2.  **Pensamento Analítico:** Capacidade de decompor um problema de negócio em uma query SQL lógica e eficiente.
-3.  **Atenção a Detalhes:** Cuidado com casos extremos.
+3.  **Atenção a Detalhes:** Soluções que passam em **todos os submissions**, incluindo edge cases.
 4.  **Documentação e Organização:** Habilidade de estruturar e apresentar seu trabalho de forma clara e acessível.
 
 ---
