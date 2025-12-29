@@ -2,9 +2,9 @@
 
 ## 📊 Visão Geral
 
-**Total de Soluções:** 50 | **Easy:** 37 | **Medium:** 13
+**Total de Soluções:** 55 | **Easy:** 41 | **Medium:** 14
 
-**Última Atualização:** 23 de Dezembro de 2025
+**Última Atualização:** 29 de Dezembro de 2025
 
 - Este repositório documenta minha jornada de aprendizado e prática de SQL através da resolução de problemas no LeetCode. 
 - Meu objetivo é demonstrar domínio progressivo de conceitos, pensamento analítico e habilidades de resolução de problemas relevantes.
@@ -17,23 +17,24 @@
 
 ## 📝 Catálogo de Soluções
 
-### 🟡 **Problemas Medium (13)**
+### 🟡 **Problemas Medium (14)**
 
 | ID   | Problema | Tópicos Principais | Link para a Solução |
 |------|----------|-------------------|---------------------|
 | 176  | Second Highest Salary | `CTE`, `DENSE_RANK`, `Window Function`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/176.%20Second%20Highest%20Salary.md) |
+| 180  | Consecutive Numbers | `CTE`, `LAG`, `LEAD`, `Window Function` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/180.%20Consecutive%20Numbers.md) |
 | 550  | Game Play Analysis IV | `JOIN`, `ROUND`, `MIN`, `DATEADD` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/550.%20Game%20Play%20Analysis%20IV.md) |
 | 570  | Managers With at Least 5 Direct Reports | `SELF JOIN`, `GROUP BY`, `COUNT`, `HAVING` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/570.%20Managers%20With%20at%20Least%205%20Direct%20Reports.md) |
+| 626  | Exchange Seats | `JOIN`, `CASE`, `ROW_NUMBER`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/medium/626.%20Exchange%20Seats.md) |
 | 1045 | Customers Who Bought All Products | `GROUP BY`, `HAVING`, `COUNT`, `Subquery` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1045.%20Customers%20Who%20Bought%20All%20Products.md) |
 | 1070 | Product Sales Analysis III | `CTE`, `MIN`, `GROUP BY`, `JOIN` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1070.%20Product%20Sales%20Analysis%20III.md) |
+| 1164 | Product Price at a Given Date | `JOIN`, `WHERE`, `MIN`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1164.%20Product%20Price%20at%20a%20Given%20Date.md) |
 | 1174 | Immediate Food Delivery II | `ROW_NUMBER`, `CASE`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1174.%20Immediate%20Food%20Delivery%20II.md) |
 | 1193 | Monthly Transactions I | `GROUP BY`, `FORMAT`, `SUM`, `COUNT` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1193.%20Monthly%20Transactions%20I.md) |
-| 180  | Consecutive Numbers | `CTE`, `LAG`, `LEAD`, `Window Function` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/180.%20Consecutive%20Numbers.md) |
-| 1934 | Confirmation Rate | `LEFT JOIN`, `GROUP BY`, `CASE`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1934.%20Confirmation%20Rate.md) |
+| 1204 | Last Person to Fit in the Bus | `ORDER BY`, `SUM`, `CTE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1204.%20Last%20Person%20to%20Fit%20in%20the%20Bus.md) |
+| 1341 | Movie Rating | `CTE`, `GROUP BY`, `ORDER BY`, `AVG`, `COUNT`, `UNION ALL` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/medium/1341.%20Movie%20Rating.md) |
 | 1907 | Count Salary Categories | `GROUP BY`, `CASE`, `SUM`, `COUNT` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1907.%20Count%20Salary%20Categories.md) |
-| 1204 | Last Person to Fit in the Bus | `ORDER BY`, `SUM`, `LIMIT`, `CTE` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1204.%20Last%20Person%20to%20Fit%20in%20the%20Bus.md) |
-| 1164 | Product Price at a Given Date | `JOIN`, `WHERE`, `MIN`, `MAX` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1164.%20Product%20Price%20at%20a%20Given%20Date.md) |
-| 626  | Exchange Seats | `JOIN`, `CASE`, `ROW_NUMBER`, `ORDER BY` | [Ver Código](https://github.com/gyamada22/SQL-Data-Analytics/blob/main/medium/626.%20Exchange%20Seats.md) |
+| 1934 | Confirmation Rate | `LEFT JOIN`, `GROUP BY`, `CASE`, `ROUND` | [Ver Código](https://github.com/gyamada22/sql-data-engineering/blob/main/medium/1934.%20Confirmation%20Rate.md) |
 
 ### 🟢 **Problemas Easy (41)**
 
