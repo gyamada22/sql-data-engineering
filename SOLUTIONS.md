@@ -2,9 +2,9 @@
 
 ## 📊 Visão Geral
 
-**Total de Soluções:** 55 | **Easy:** 41 | **Medium:** 14
+**Total de Soluções:** 59 | **Easy:** 44 | **Medium:** 15
 
-**Última Atualização:** 29 de Dezembro de 2025
+**Última Atualização:** 01 de Janeiro de 2026
 
 - Este repositório documenta minha jornada de aprendizado e prática de SQL através da resolução de problemas no LeetCode. 
 - Meu objetivo é demonstrar domínio progressivo de conceitos, pensamento analítico e habilidades de resolução de problemas relevantes.
